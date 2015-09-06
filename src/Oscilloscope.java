@@ -1,21 +1,14 @@
 import java.io.File;
-//import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
-//import org.apache.xpath.operations.String;
 import org.junit.*;
-
 import static org.junit.Assert.*;
-//import static org.hamcrest.CoreMatchers.*;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-//import org.openqa.selenium.support.ui.Select;
+
 public class Oscilloscope {
     private WebDriver driver;
     private java.lang.String baseUrl;
-    //private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
     @Before
@@ -69,37 +62,4 @@ public class Oscilloscope {
             fail(verificationErrorString);
         }
     }
-
-    /*private boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
-
-    private boolean isAlertPresent() {
-        try {
-            driver.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
-    private java.lang.String closeAlertAndGetItsText() {
-        try {
-            Alert alert = driver.switchTo().alert();
-            java.lang.String alertText = alert.getText();
-            if (acceptNextAlert) {
-                alert.accept();
-            } else {
-                alert.dismiss();
-            }
-            return alertText;
-        } finally {
-            acceptNextAlert = true;
-        }
-    }*/
 }
